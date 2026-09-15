@@ -51,12 +51,35 @@ export default function Inicio() {
             {/* Exibe o texto "GameHub" como titulo, usando o estilo "titulo" */}
             <Text style={style.subtitulo}>Seu universo de jogos em um só lugar</Text>
 
-        </ScrollView>
-             //--------------------------------
+            //--------------------------------
             // BLOCO 2.1 - SEÇÃO JOGOS
             //--------------------------------
 
-            
+            <Text style={style.secaoTitulo}>Jogos em destaque</Text>
+            {/* Exibe o titulo desta seção, usando o estilo "secaoTitulo" */}
+            <FlatList
+                data={destaques}
+                // Define a fonte de dados da lista - array "destaques".
+                keyExtractor={(item) => item.id}
+                // Função que retorna a chave única
+                horizontal
+                // Faz a lista
+                showsHorizontalScrollIndicator={false}
+                // Oculta a barrinha de rolagem horizontal, deixando a interface mais limpa
+                renderItem={({ item }) => <GameCard jogo={item}/>}
+                // Função chamada para cada elemento do array "data"
+             />
+
+            //------------------------------------
+            // BLOCO 2.2 - SEÇÃO "MAIS POPULARES"
+            //------------------------------------
+
+                    
+
+
+        </ScrollView>
+           
+
     );
 
 }
