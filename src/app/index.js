@@ -73,13 +73,91 @@ export default function Inicio() {
             //------------------------------------
             // BLOCO 2.2 - SEÇÃO "MAIS POPULARES"
             //------------------------------------
+            {/* Mesma estrutura da seção anterior, mas com dados diferentes */}
+            <text style={styles.secaoTitulo}>Mais Populares</text>
+            {/* Título da segunda seção, reaproveitando o mesmo estilo
+            "Seção Titulo" */}
 
-                    
+            <FlatList
+                data={populares}
+                // Desta vez a fonte de dados é o array "populares" (top 5 por nota)
+                keyExtractor={(item) => item.id}
+                // Mesma lógica de chave única no id do jogo
+                horizontal
+                //Linha horizontal, igual à seção anterior
+                showsHorizontalScrollIndicator={false}
+                // Esconder o indicador de rolagem
+                renderItem={({item}) => <GameCard jogo={item} />}
+                // Reutiliza o mesmo componente GameCard, provando que ele funciona com qualquer lista de jogos!
+            />
+            
+            //------------------------------------
+            // BLOCO 2.3 - BOTÃO "VER TODOS OS JOGOS"   
+            //------------------------------------
 
+            {/* Pressable oferece mais controle sobre o estilo e feedback visual */}
 
+            <pressable
+             // Aplica o estilo visual no botão!
+            style={styles.botao}
+            onPress={() => router.push("./jogos")}
+            // onPress: função executada quando o usuário toca no botão
+            // router.psuh("./jogos") navega para a rota "/jogos"
+            >
+                <text style={styles.textobotao}>Ver todos os Jogos</text>
+           
+            </pressable>
         </ScrollView>
            
-
     );
 
 }
+
+//------------------------------------
+// BLOCO 3 - ESTILOS   
+//------------------------------------
+// PORQUE USAR StylesSheet?
+// - StyleSheet.create oyimixs os estilos (evita recriação desnecessária)
+
+const styles = StyleSheet.create({
+    container:{
+        flex: 1,
+        backgroundColor: cores.fundo,        
+    },
+    conteudo:{
+        padding: 20,
+        paddingBottom:40,
+    },
+    titulo:{
+        fontSize: 32,
+        fontWeight:"bold",
+        color: cores.textoPrincipal,
+    },
+    subtitulo: {
+        fontSize:15,
+        color: cores.textoSecundario,
+        marginTop: 4,
+        marginBottom: 24,
+    },
+    secaoTitulo:{
+        fontSize: 16,
+        fontWeight: "bold",
+        color: cores.textoPrincipal,
+        marginTop: 8,
+        marginBottom: 12,
+    },
+    botao:{
+        backgroundColor: cores.roxo,
+        borderRadius: 12,
+        paddingVertical: 14,
+        alignItems: "center",
+        marginTop: 24,
+    },
+    textobotao:{
+        color:  cores.textoPrincipal,
+        fontSize: 16,
+        fontWeight: "bold",
+        
+    }
+
+})
