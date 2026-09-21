@@ -11,3 +11,5 @@ export const cores ={
     textoSecundario: "#A0A0AA0",
     borda: "#2A2A2A",
 };
+
+// ETAPA 3 - CRIAR O ARQUIVO jogos.js COMO OS DADOS DOS JOGOS
