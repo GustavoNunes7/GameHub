@@ -3,7 +3,7 @@
 // O que fazemos aqui?
 // Esta é a tela inicial do app (rota "/"). 
 
-import { View, text, ScrollView, FlatList, pressable, StyleSheet} from "react-native";
+import { View, Text, ScrollView, FlatList, Pressable, StyleSheet} from "react-native";
 // view - Conteiner básicos
 // text - Para exibir textos
 // ScrollView - Permite rolagem vertical

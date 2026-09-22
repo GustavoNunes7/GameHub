@@ -2,7 +2,7 @@
 // ETAPA 4 - CRIAR COMPONENTE
 // ==============================
 // Nós vamos reutilizar o componente em 03 telas diferentes (Inicio, Jogos, Favoritos)
-import {view, text, Image, Pressable, StyleSheet} from "react-native";
+import {View, Text, Image, Pressable, StyleSheet} from "react-native";
 
 import { useRouter } from "expo-router";
 // navegação programatica.
@@ -42,7 +42,27 @@ const styles = StyleSheet.create({
         borderColor: cores.borda,
     },
     imagem:{
-        
-    }
+        width: "100%",
+        height:110,
+    },
+    info:{
+        padding:10,
+    },
+    nome:{
+        color: cores.textoPrincipal,
+        fontSize:14,
+        fontWeight: "bold",
+    },
+    genero:{
+        color:cores.textoSecundario,
+        fontSize: 12,
+        marginTop:2,
+    },
+    nota:{
+        color:cores.verde,
+        fontSize:12,
+        marginTop:4,
+        fontWeight:"600",
+    },
 
-}) 
+});
