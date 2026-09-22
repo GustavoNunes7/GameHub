@@ -11,26 +11,20 @@ Guia rápido para gerar builds instaláveis do projeto React Native/Expo nas dua
 
 ## Passo a passo comum (Android e iOS)
 
-### 1. Instalar o EAS CLI
+### 1. Fazer login na Expo
 
 ```bash
-npm install -g eas-cli
+npx eas-cli login
 ```
 
-Instala globalmente a ferramenta de linha de comando que se comunica com os servidores de build da Expo.
-
-### 2. Fazer login na Expo
-
-```bash
-eas login
-```
+Usar `npx eas-cli` (em vez de instalar o `eas-cli` globalmente com `npm install -g`) evita erros comuns de permissão e de versão global desatualizada — o `npx` baixa e roda a versão certa na hora, sem precisar instalar nada fixo na máquina.
 
 Se ainda não tiver conta, crie uma gratuitamente em [expo.dev](https://expo.dev) — ela é necessária para usar o serviço de build na nuvem.
 
-### 3. Configurar o build
+### 2. Configurar o build
 
 ```bash
-eas build:configure
+npx eas-cli build:configure
 ```
 
 Cria o arquivo `eas.json` na raiz do projeto, com os perfis `development`, `preview` e `production`. Só precisa rodar uma vez. Nesse passo o EAS pode perguntar quais plataformas você quer configurar — escolha **Android e iOS**.
@@ -73,7 +67,7 @@ Por padrão, o Expo gera um `.aab` (formato exigido pela Play Store). Para gerar
 Rodar o build:
 
 ```bash
-eas build --platform android --profile preview
+npx eas-cli build --platform android --profile preview
 ```
 
 Leva geralmente entre 5 e 15 minutos. Ao terminar, o terminal mostra um link de download (também disponível em `expo.dev/accounts/[sua-conta]/projects`).
@@ -100,7 +94,7 @@ O perfil `preview` do `eas.json` já criado serve para isso, sem precisar de aju
 Rodar o build:
 
 ```bash
-eas build --platform ios --profile preview
+npx eas-cli build --platform ios --profile preview
 ```
 
 Na primeira vez, o EAS pergunta se você quer que ele gerencie as credenciais da Apple (certificados e provisioning profile) automaticamente — responda **sim**, e faça login com o Apple ID quando solicitado. Isso evita ter que mexer manualmente no Apple Developer portal.
@@ -108,7 +102,7 @@ Na primeira vez, o EAS pergunta se você quer que ele gerencie as credenciais da
 Depois do build pronto:
 
 ```bash
-eas submit --platform ios --profile preview
+npx eas-cli submit --platform ios --profile preview
 ```
 
 Esse comando envia o build para o **TestFlight**. Em alguns minutos ele aparece disponível para os dispositivos cadastrados, e quem for testar instala pelo app TestFlight no iPhone.
@@ -120,7 +114,7 @@ Esse comando envia o build para o **TestFlight**. Em alguns minutos ele aparece 
 ## Rodar os dois builds de uma vez
 
 ```bash
-eas build --platform all --profile preview
+npx eas-cli build --platform all --profile preview
 ```
 
 O EAS enfileira o build de Android e de iOS juntos.
@@ -163,7 +157,7 @@ npm ls react-native-worklets react-native-reanimated expo-modules-core
 Depois, gere o build novamente limpando o cache:
 
 ```bash
-eas build --platform android --profile preview --clear-cache
+npx eas-cli build --platform android --profile preview --clear-cache
 ```
 
 > 💡 Esse é um problema conhecido do Expo SDK 57. Se uma atualização futura corrigir a compatibilidade, `npx expo install --fix` pode passar a resolver automaticamente — até lá, o ajuste manual acima é necessário.

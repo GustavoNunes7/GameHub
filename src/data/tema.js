@@ -4,8 +4,8 @@
 
 export const cores = {
     fundo: "#100542ff",
-    fundoCard: "#1E1E1E",
-    roxo: "#800a0aff",
+    fundoCard: "#031f08ff",
+    corBotao: "#800a0aff",
     verde: "#2CB67D",
     textoPrincipal: "#FFFFFF",
     textoSecundario: "#A0A0A0",

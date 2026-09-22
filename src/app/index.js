@@ -115,6 +115,8 @@ const styles = StyleSheet.create({
     container: {
         flex: 1,
         backgroundColor: cores.fundo,
+       
+    
     },
     conteudo: {
         padding: 20,
@@ -124,6 +126,7 @@ const styles = StyleSheet.create({
         fontSize: 32,
         fontWeight: "bold",
         color: cores.textoPrincipal,
+        
     },
     subtitulo: {
         fontSize: 15,
@@ -139,7 +142,7 @@ const styles = StyleSheet.create({
         marginBottom: 12,
     },
     botao: {
-        backgroundColor: cores.roxo,
+        backgroundColor: cores.corBotao,
         borderRadius: 12,
         paddingVertical: 14,
         alignItems: "center",
