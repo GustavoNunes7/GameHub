@@ -1,6 +1,6 @@
-// ==============================
+// ===============================
 // ETAPA 3 - CADASTRO DOS JOGOS
-// ==============================
+// ===============================
 
 export const jogos = [
     {
@@ -8,8 +8,8 @@ export const jogos = [
         nome: "Minecraft",
         genero: "Sandbox",
         nota: 4.8,
-        plataforma:"PC, Console, Mobile",
-        Descrição: "Um mundo feito de blocos onde você pode construir",
+        plataforma: "PC, Console, Mobile",
+        Descrição: "Um mundo feito de blocos onde você pode contruir",
         imagem: require("../../assets/games/minecraft.jpg"),
         destaque: true,
     },
@@ -18,7 +18,7 @@ export const jogos = [
         nome: "Fortnite",
         genero: "Battle",
         nota: 4.5,
-        plataforma:"PC, Console, Mobile",
+        plataforma: "PC, Console, Mobile",
         Descrição: "Uma ilha e um objetivo, sobreviver!",
         imagem: require("../../assets/games/fortnite.jpg"),
         destaque: true,
@@ -28,7 +28,7 @@ export const jogos = [
         nome: "EA Sports FC",
         genero: "Esportes",
         nota: 4.3,
-        plataforma:"PC, Console",
+        plataforma: "PC, Console, Mobile",
         Descrição: "Simulador de futebol mais famoso do mundo",
         imagem: require("../../assets/games/ea-sports-fc.jpg"),
         destaque: true,
@@ -38,18 +38,18 @@ export const jogos = [
         nome: "Roblox",
         genero: "SandBox",
         nota: 4.6,
-        plataforma:"PC, Console, Mobile",
-        Descrição: "Vários jogos dentro de um jogo",
+        plataforma: "PC, Console, Mobile",
+        Descrição: "Varios jogos dentro de um jogo",
         imagem: require("../../assets/games/roblox.jpg"),
         destaque: true,
     },
     {
         id: "5",
-        nome: "Rocket League",
+        nome: "Rocket league",
         genero: "Esportes",
         nota: 4.4,
-        plataforma:"PC, Console, Mobile",
-        Descrição: "Futebol com carros turbinados",
+        plataforma: "PC, Console, Mobile",
+        Descrição: "Futebol com carros turbinados.",
         imagem: require("../../assets/games/rocket-league.jpg"),
         destaque: false,
     },
@@ -58,9 +58,9 @@ export const jogos = [
         nome: "Valorant",
         genero: "FPS",
         nota: 4.7,
-        plataforma:"PC, Console",
-        Descrição: "Um jogo de tiro tático em equipe",
-        imagem: require("../../assets/games/rocket-league.jpg"),
+        plataforma: "PC, Console, Mobile",
+        Descrição: "um jogo de tiro tático em equipe",
+        imagem: require("../../assets/games/valorant.jpg"),
         destaque: false,
     },
     {
@@ -68,7 +68,7 @@ export const jogos = [
         nome: "The Sims",
         genero: "Simulação",
         nota: 4.2,
-        plataforma:"PC, Console, Mobile",
+        plataforma: "PC, Console, Mobile",
         Descrição: "Simulador de vida real",
         imagem: require("../../assets/games/the-sims.jpg"),
         destaque: false,
@@ -78,10 +78,11 @@ export const jogos = [
         nome: "Among Us",
         genero: "Detetive",
         nota: 4.1,
-        plataforma:"PC, Console, Mobile",
+        plataforma: "PC, Console, Mobile",
         Descrição: "Descubra quem é o impostor",
         imagem: require("../../assets/games/among-us.jpg"),
         destaque: false,
     },
+    
 ]
-//  VAMOS PARA ETAPA 4 - CRIAR O ARQUIVO GameCard.js COM OS DADOS DOS JOGOS
+// VAMOS PARA ETAPA 4 - CRIAR O ARQUIVO GameCard.js COM OS DADOS DOS JOGOS
