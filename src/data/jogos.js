@@ -137,7 +137,7 @@ export const jogos = [
         id: "14",
         nome: "Subway Surfers",
         genero: "Corrida",
-        nota: 4.4,
+        nota: 4.2,
         plataforma: "Mobile",
         Descrição: "Escape de um policial com seu cachorro no meio dos trilhos!",
         imagem: require("../../assets/games/ss.jpg"),
@@ -153,6 +153,18 @@ export const jogos = [
         imagem: require("../../assets/games/cod.jpg"),
         destaque: true,
     },
+    
+    {
+        id: "16",
+        nome: "Mario Kart",
+        genero: "Corrida",
+        nota: 4.7,
+        plataforma: "Console",
+        Descrição: "Corra com Mario e seus amigos a qualquer hora, em qualquer lugar!",
+        imagem: require("../../assets/games/mariokart.jpg"),
+        destaque: true,
+    },
+    
     
     
 ]
